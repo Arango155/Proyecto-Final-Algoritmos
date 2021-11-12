@@ -1,0 +1,116 @@
+<!-- Josue David Garcia Arango, 0909-21-11375 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pago en tarjeta de credito | Josue Arango</title>
+</head>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="index.html">
+<body>
+
+	<form  action="index.html" method="post" class="form-register">  
+		<h4>Pago en tarjeta de credito</h4>
+
+		<h1 class="texto2">Seleccione la cantidad de tiempo que estuvo en el parque</h1>
+
+
+<select class="controls" name="" id="list" size="5" onchange="getSelectValue () ;">              
+
+	<option value="0.5">00:30min</option>
+			<option value="1">1 hr</option>
+			<option value="2">2 hrs</option>
+			<option value="3">3 hrs</option>
+			<option value="4">4 hrs</option>
+			<option value="5">5 hrs</option>
+			<option value="6">6 hrs</option>
+			<option value="7">7 hrs</option>
+			<option value="8">8 hrs</option>
+			<option value="9">9 hrs</option>
+			<option value="10">10 hr</option>
+			<option value="11">11 hrs</option>
+			<option value="13">13 hrs</option>
+			<option value="14">14 hrs</option>
+			<option value="15">15 hr</option>
+			<option value="16">16 hrs</option>
+			<option value="17">17 hrs</option>
+			<option value="18">18 hrs</option>
+			<option value="19">19 hrs</option>
+			<option value="20">20 hr</option>
+			<option value="21">21 hrs</option>
+			<option value="22">22 hrs</option>
+			<option value="23">23 hrs</option>
+			<option value="24">24 hrs</option>
+</select>
+
+<script>
+	function getSelectValue() {
+		console.log(selectedValue)
+	}
+	alert (SelectedValue);
+</script>
+
+<input type="button" value="CALCULAR MONTO A PAGAR" class="container" id="tc" onclick="alert( ejecutar(1) );"> 
+
+<br>
+<br>
+
+<script>
+    var ejecutar= function(a){     
+		var SelectedValue = document.getElementById("list").value;
+		var a=(SelectedValue*10)
+     {
+     return "El monto a pagar es de " +a+"Q";
+ }
+
+}
+
+</script>
+
+
+
+		<h1 class="texto2">Ingrese su numero de carnet recuerde que consta de 7 digitos</h1>
+		<input class="controls" type="text" id="carnet" placeholder="0000000">
+		 <input class="control" type="button" value="CALCULAR" onclick="alert( ejecutar1(1,2) );">
+		 <input class="control" type="submit" value="VOLVER AL INICIO"><br>  <br>  
+    </form>
+
+	<script>
+		var ejecutar1 = function(c){     
+		var c = parseFloat(document.getElementById("carnet").value); 
+		var SelectedValue = document.getElementById("list").value;
+		var a=(SelectedValue*10)
+
+		if (c<1000000) {
+			location.href=location.href;
+			return "El numero de carnet es invalido, recuerda que los numero de carnet son de 7 digitos";  
+		}
+		if (c>9999999) {
+			location.href=location.href;
+			return "El numero de carnet es invalido, recuerda que los de carnet son de 7 digitos";  
+		}    
+		else {
+			location.href=location.href;
+			return "La transferencia ha sido realizada exitosamente, se han retirado " +a +"Q de su cuenta, gracias por usar el programa"
+		}  
+
+	}
+
+
+</script>
+
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

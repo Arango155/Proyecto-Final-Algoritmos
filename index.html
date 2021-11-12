@@ -1,0 +1,79 @@
+<!-- Josue David Garcia Arango, 0909-21-11375 -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8"> 
+    
+    <title>Proyecto Final | Josue Arango </title>
+
+</head>
+
+
+<link rel="stylesheet" href="style.css">
+
+<script> alert('Bienvenido al programa para el pago de su parqueo, se le solicita que ingrese correctamente los datos que se le presentaran a continuacion')</script>
+
+    <body>
+
+
+        <form  class="form-register">  
+			<h4>Pago de Parqueo</h4>
+            <br>
+			<br>
+            <input class="controls" type="text" id="ticket" placeholder="Ingrese su numero de ticket">
+			<br>
+			<br>
+			 <input class="control" type="button" value="VALIDAR NUMERO DE TICKET" onclick="alert( ejecutar(1,2) );">  <br>  <br> 
+
+
+			<script>
+                var ejecutar = function(t){     
+                var t = parseFloat(document.getElementById("ticket").value); 
+
+                if (t<1000000) {
+					location.href=location.href;
+					return "El numero de ticket es invalido, recuerda que los ticket son de 7 digitos";  
+				}
+				if (t>9999999) {
+					location.href=location.href;
+					return "El numero de ticket es invalido, recuerda que los de ticket son de 7 digitos";  
+				}    
+				else {
+					return "Numero de ticket valido, puede continuar con el proceso"
+				}  
+
+            }
+
+
+        </script>
+
+			<div class="cont-menu">
+				<div class="cont-enlace">
+					<div class="opcion">
+						<p> Seleccione un metodo de pago </p>
+						<p class="icono"> </p>
+					</div>
+					<div class="enlace">
+						<a href="efectivo.html"> Efectivo </a>
+						<a href="tarjeta.html"> Tarjeta de credito </a>
+					</div>
+				</div>
+			</div>
+
+
+        </form>
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+    </body>
+
+	<script src="app.js"></script>
+</html>

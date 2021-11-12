@@ -1,0 +1,175 @@
+<!-- Josue David Garcia Arango, 0909-21-11375 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pago en efectivo | Josue Arango</title>
+</head>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="index.html">
+<body>
+
+	<form action="index.html" method="post" class="form-register">  
+		<h4>Pago en Efectivo</h4>
+		<br>
+		<br>
+
+		<h1 class="texto2">Seleccione la cantidad de tiempo que estuvo en el parque</h1>
+
+		<br>
+		
+<select class="controls" name="" id="list" size="5" onchange="getSelectValue () ;">              
+
+	<option value="0.5">00:30min</option>
+			<option value="1">1 hr</option>
+			<option value="2">2 hrs</option>
+			<option value="3">3 hrs</option>
+			<option value="4">4 hrs</option>
+			<option value="5">5 hrs</option>
+			<option value="6">6 hrs</option>
+			<option value="7">7 hrs</option>
+			<option value="8">8 hrs</option>
+			<option value="9">9 hrs</option>
+			<option value="10">10 hr</option>
+			<option value="11">11 hrs</option>
+			<option value="13">13 hrs</option>
+			<option value="14">14 hrs</option>
+			<option value="15">15 hr</option>
+			<option value="16">16 hrs</option>
+			<option value="17">17 hrs</option>
+			<option value="18">18 hrs</option>
+			<option value="19">19 hrs</option>
+			<option value="20">20 hr</option>
+			<option value="21">21 hrs</option>
+			<option value="22">22 hrs</option>
+			<option value="23">23 hrs</option>
+			<option value="24">24 hrs</option>
+</select>
+
+<script>
+	function getSelectValue() {
+		console.log(selectedValue)
+	}
+	alert (SelectedValue);
+</script>
+
+<br>	
+
+<input type="button" value="CALCULAR MONTO A PAGAR" class="container" id="tc" onclick="alert( ejecutar(1) );"> 
+
+<br>
+<br>
+
+<script>
+    var ejecutar= function(a){     
+		var SelectedValue = document.getElementById("list").value;
+		var a=(SelectedValue*10)
+     {
+     return "El monto a pagar es de " +a+"Q";
+ }
+
+}
+
+</script>
+
+
+<h1 class="texto2">Seleccione el valor de los billetes con los que pagara el monto</h1>
+
+		<select class="select" name="" id="list1" onchange="getSelectValue1 ();">              
+			<option disabled="">En caso de usar solo un billete use esta lista</option>     
+			<option value="0">00</option>  
+			<option value="5">5Q</option>
+					<option value="10">10Q</option>
+					<option value="20">20Q</option>
+					<option value="50">50Q</option>
+					<option value="100">100Q</option>
+					<option value="200">200Q</option>
+		</select>
+
+		<script>
+			function getSelectValue1() {
+				console.log(selectedValue1)
+			}
+			alert (SelectedValue1);
+		</script>
+
+		<select class="select" name="" id="list2" onchange="getSelectValue2 ();">              
+			<option disabled="">En caso de usar mas de un billete use esta lista tambien</option>   
+			<option value="0">00</option>    
+			<option value="5">5Q</option>
+					<option value="10">10Q</option>
+					<option value="20">20Q</option>
+					<option value="50">50Q</option>
+					<option value="100">100Q</option>
+					<option value="200">200Q</option>
+		</select>
+
+	
+
+<script>
+	function getSelectValue2() {
+		console.log(selectedValue2)
+	}
+	alert (SelectedValue2);
+</script>
+
+
+
+		<input class="control" type="button" value="EFECTUAR PAGO" onclick="alert( ejecutar1(1) );">  
+		<input class="control" type="submit" value="VOLVER AL INICIO"><br>  <br> 
+    </form>
+
+
+
+
+
+	</script>
+
+	<script>
+		var ejecutar1 = function(t){     
+		var SelectedValue1 = document.getElementById("list1").value;
+		var SelectedValue = document.getElementById("list").value;
+		var SelectedValue2 = document.getElementById("list2").value;
+		var resultado =(Number(SelectedValue1)+Number(SelectedValue2));
+		var a=(SelectedValue*10)
+		var cambio=resultado-a;
+
+	
+
+
+		if (resultado<a) {
+					location.href=location.href;
+					return "El valor de los billetes seleccionados es menor al del monto a pagar, pruebe con otros billetes de mas valor";  
+				}
+				
+				else {
+					location.href=location.href;
+					return "Transferencia realizada con exito, su cambio es de " +cambio +"Q, gracias por usar el programa"
+				}  
+
+	}
+
+
+</script>
+
+
+
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>
